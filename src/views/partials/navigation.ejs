@@ -1,0 +1,92 @@
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#003f87",
+            "primary-container": "#0056b3",
+            "on-primary": "#ffffff",
+            background: "#f7fafc",
+            "on-error": "#ffffff",
+            "on-background": "#181c1e",
+            "secondary-container": "#d1e1f9",
+            surface: "#f8fafc",
+            "on-surface": "#0f172a",
+            "on-surface-variant": "#475569",
+            outline: "#94a3b8",
+            "outline-variant": "#cbd5e1",
+            "on-secondary-fixed": "#0d1c2e",
+            "error-container": "#ffdad6",
+            "inverse-primary": "#acc7ff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "surface-container": "#ebeef0",
+            "secondary-fixed": "#d4e4fc",
+            "surface-dim": "#d7dadc",
+            "on-tertiary-fixed": "#351000",
+            "surface-container-highest": "#e0e3e5",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>    
+  <style>
+    .bg-dot-pattern {
+      background-image: radial-gradient(
+        rgba(15, 23, 42, 0.08) 1.2px,
+        transparent 1.2px
+      );
+      background-size: 24px 24px;
+    }
+    .material-symbols-outlined {
+      font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 20;
+    }
+  </style>
+</body>
+
+<header class="relative z-20 w-full bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-blue-600 rounded-lg pr-2 py-1" href="/">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-800 via-blue-700 to-blue-600 flex items-center justify-center text-white font-bold text-xl shadow-md shadow-blue-700/20 group-hover:scale-105 transition-transform duration-200">
+        P
+      </div>
+      <div class="flex flex-col">
+        <span class="font-bold text-slate-900 tracking-tight text-base leading-tight">SGP Geranio</span>
+        <span class="text-[11px] font-medium text-slate-500 tracking-wide uppercase">Conjunto Residencial</span>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-1" data-active-classes="bg-secondary-container text-on-secondary-container font-label-bold">
+      <a
+        aria-current="page"
+        class="px-3 py-2 rounded-lg transition-colors bg-surface-container-high text-on-surface font-label-bold transition-colors"
+        data-path="inicio"
+        href="/">Inicio</a>
+        <a
+        class="px-3 py-2 rounded-lg font-link text-link text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+        data-path="normativa-tarifas"
+        href="#">Normativa y Tarifas</a>
+        <a
+        class="px-3 py-2 rounded-lg font-link text-link text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
+        data-path="contacto-administracion"
+        href="#">Atención y Soporte</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a class="px-4 py-2 rounded-lg bg-primary text-on-primary font-button-text text-button-text border border-slate-300/80 shadow-sm transition-all duration-200 hover:shadow-inner hover:-translate-y-px hover:bg-slate-50 active:scale-95 active:shadow-inner active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+        data-path="login-acceso"
+        href="/login">Iniciar Sesión</a>
+    </div>
+  </div>
+</header>
