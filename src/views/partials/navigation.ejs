@@ -38,7 +38,7 @@
         },
       },
     };
-  </script>    
+  </script>
   <style>
     .bg-dot-pattern {
       background-image: radial-gradient(
@@ -57,6 +57,19 @@
   </style>
 </body>
 
+<%
+  /**
+   * navItems: fuente única de verdad del navbar principal.
+   * "path" debe coincidir EXACTO con la ruta definida en routes/index.js.
+   * Nota: se dejó "/normativa_tarifas" tal como está hoy en el router (con el
+   * typo "normativa"); si en algún momento renombran la ruta, actualícenla aquí también.
+   */
+  const navItems = [
+    { path: "/", label: "Inicio" },
+    { path: "/normativa_tarifas", label: "Normativa y Tarifas" },
+    { path: "/support", label: "Atención y Soporte" },
+  ];
+%>
 <header class="relative z-20 w-full bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
     <a class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-blue-600 rounded-lg pr-2 py-1" href="/">
@@ -68,25 +81,25 @@
         <span class="text-[11px] font-medium text-slate-500 tracking-wide uppercase">Conjunto Residencial</span>
       </div>
     </a>
-    <nav class="hidden md:flex items-center gap-1" data-active-classes="bg-secondary-container text-on-secondary-container font-label-bold">
-      <a
-        aria-current="page"
-        class="px-3 py-2 rounded-lg transition-colors bg-surface-container-high text-on-surface font-label-bold transition-colors"
-        data-path="inicio"
-        href="/">Inicio</a>
+
+    <nav class="hidden md:flex items-center gap-1">
+      <% navItems.forEach(function (item) { %>
+        <% var isActive = currentPath === item.path; %>
         <a
-        class="px-3 py-2 rounded-lg font-link text-link text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
-        data-path="normativa-tarifas"
-        href="#">Normativa y Tarifas</a>
-        <a
-        class="px-3 py-2 rounded-lg font-link text-link text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors"
-        data-path="contacto-administracion"
-        href="#">Atención y Soporte</a>
+          <% if (isActive) { %>aria-current="page"<% } %>
+          class="px-3 py-2 rounded-lg transition-colors hover:bg-surface-container-high hover:text-on-surface <%= isActive ? "bg-surface-container-high text-on-surface font-label-bold" : "font-link text-link text-on-surface-variant" %>"
+          data-path="<%= item.path %>"
+          href="<%= item.path %>"
+        ><%= item.label %></a>
+      <% }); %>
     </nav>
+
     <div class="flex items-center gap-4">
-      <a class="px-4 py-2 rounded-lg bg-primary text-on-primary font-button-text text-button-text border border-slate-300/80 shadow-sm transition-all duration-200 hover:shadow-inner hover:-translate-y-px hover:bg-slate-50 active:scale-95 active:shadow-inner active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+      <a
+        class="px-4 py-2 rounded-lg bg-primary text-on-primary font-button-text text-button-text hover:bg-primary-container transition-colors"
         data-path="login-acceso"
-        href="/login">Iniciar Sesión</a>
+        href="/login"
+      >Iniciar Sesión</a>
     </div>
   </div>
 </header>

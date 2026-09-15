@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="es" style="">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SGP Geranio P.H. Residencial</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-fixed-dim": "#b8c8df",
+              "outline-variant": "#c2c6d4",
+              "on-secondary-container": "#556478",
+              "primary-fixed": "#d7e2ff",
+              background: "#f7fafc",
+              "secondary-container": "#d1e1f9",
+              "surface-container-lowest": "#ffffff",
+              outline: "#727784",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed-variant": "#7b2f00",
+              error: "#ba1a1a",
+              "primary-container": "#0056b3",
+              "on-surface-variant": "#424752",
+              "on-error": "#ffffff",
+              "inverse-primary": "#acc7ff",
+              "tertiary-container": "#983c00",
+              "on-primary-container": "#bbd0ff",
+              "primary-fixed-dim": "#acc7ff",
+              "on-tertiary-fixed": "#351000",
+              primary: "#003f87",
+              "surface-bright": "#f7fafc",
+              "on-background": "#181c1e",
+              secondary: "#515f74",
+              "on-secondary-fixed-variant": "#39485b",
+              "surface-container-low": "#f1f4f6",
+              "on-surface": "#181c1e",
+              "on-primary-fixed": "#001a40",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#ffb694",
+              tertiary: "#722b00",
+              "surface-container-highest": "#e0e3e5",
+              surface: "#f7fafc",
+              "on-error-container": "#93000a",
+              "on-secondary": "#ffffff",
+              "on-secondary-fixed": "#0d1c2e",
+              "inverse-surface": "#2d3133",
+              "surface-container-high": "#e5e9eb",
+              "tertiary-fixed": "#ffdbcc",
+              "surface-tint": "#115cb9",
+              "surface-dim": "#d7dadc",
+              "on-tertiary": "#ffffff",
+              "inverse-on-surface": "#eef1f3",
+              "on-tertiary-container": "#ffc2a7",
+              "surface-variant": "#e0e3e5",
+              "on-primary-fixed-variant": "#004491",
+              "surface-container": "#ebeef0",
+              "secondary-fixed": "#d4e4fc",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "stack-spacing": "24px",
+              "container-padding": "40px",
+              unit: "4px",
+              "element-gap": "20px",
+              "label-to-input": "8px",
+            },
+            fontFamily: {
+              link: ["Inter"],
+              "button-text": ["Inter"],
+              "label-bold": ["Inter"],
+              "body-md": ["Inter"],
+              h1: ["Inter"],
+              placeholder: ["Inter"],
+              subtitle: ["Inter"],
+            },
+            fontSize: {
+              link: ["13px", { lineHeight: "1.5", fontWeight: "500" }],
+              "button-text": ["15px", { lineHeight: "1.5", fontWeight: "600" }],
+              "label-bold": ["14px", { lineHeight: "1.4", fontWeight: "600" }],
+              "body-md": ["14px", { lineHeight: "1.5", fontWeight: "400" }],
+              h1: [
+                "28px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              placeholder: ["14px", { lineHeight: "1.5", fontWeight: "400" }],
+              subtitle: ["14px", { lineHeight: "1.5", fontWeight: "400" }],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-background font-body-md text-body-md text-on-surface min-h-screen flex flex-col"
+  >
+    <!-- Barra de navegación -->
+     
+    <%- include("Partials/navigation") %>
+    
+    
+    <main class="w-full pt-16 bg-background flex-1">
+      <div class="flex flex-col w-full">
+        <!-- Top Decorative Gradient Glow -->
+        <div class="relative w-full overflow-hidden">
+          <div
+            class="absolute -top-24 left-1/2 -translate-x-1/2 w-[900px] h-[320px] bg-gradient-to-b from-primary-fixed/40 via-secondary-container/20 to-transparent blur-3xl pointer-events-none -z-10"
+          ></div>
+          <!-- 1. ENCABEZADO DE SECCIÓN (Hero Banner & Live Status) -->
+          <section
+            class="max-w-7xl mx-auto px-container-padding pt-stack-spacing pb-stack-spacing w-full"
+          >
+            <div
+              class="flex flex-col lg:flex-row lg:items-end justify-between gap-element-gap"
+            >
+              <div class="max-w-3xl space-y-unit">
+                <!-- Subtle Badge -->
+                <div
+                  class="inline-flex items-center gap-unit px-unit py-1 rounded-full bg-secondary-container text-on-secondary-container"
+                >
+                  <span
+                    class="w-2 h-2 rounded-full bg-primary animate-pulse"
+                  ></span>
+                  <span
+                    class="font-label-bold text-[12px] uppercase tracking-wider text-primary"
+                    >CANALES OFICIALES DE ATENCIÓN Y PQRS</span
+                  >
+                </div>
+                <!-- Main Title -->
+                <h1
+                  class="font-h1 text-h1 text-on-surface tracking-tight mt-label-to-input"
+                >
+                  Centro de Atención y Soporte SGP Geranio
+                </h1>
+                <!-- Subtitle -->
+                <p
+                  class="font-subtitle text-subtitle text-on-surface-variant max-w-2xl leading-relaxed"
+                >
+                  Canal directo para propietarios, residentes y visitantes.
+                  Resuelva dudas sobre asignación de bahías, reporte novedades
+                  en garita o radique solicitudes ante la administración.
+                </p>
+              </div>
+              <!-- Live Status Chips -->
+              <div
+                class="flex flex-wrap sm:flex-nowrap items-center gap-unit bg-surface-container-lowest p-unit rounded-xl shadow-sm"
+              >
+                <div
+                  class="flex items-center gap-unit px-unit py-2 rounded-lg bg-surface-container-low"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[20px]"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >shield</span
+                  >
+                  <div class="flex flex-col text-left pr-unit">
+                    <span
+                      class="font-label-bold text-[11px] text-on-surface-variant uppercase tracking-wider"
+                      >Garita Principal</span
+                    >
+                    <span
+                      class="font-label-bold text-label-bold text-on-surface"
+                      >Operativa 24/7</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-unit px-unit py-2 rounded-lg bg-surface-container-low"
+                >
+                  <span
+                    class="material-symbols-outlined text-secondary text-[20px]"
+                    >domain</span
+                  >
+                  <div class="flex flex-col text-left pr-unit">
+                    <span
+                      class="font-label-bold text-[11px] text-on-surface-variant uppercase tracking-wider"
+                      >Oficina Administración</span
+                    >
+                    <span
+                      class="font-label-bold text-label-bold text-on-surface"
+                      >Lun-Vie 8am - 5pm</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- 2. CUADRÍCULA PRINCIPAL (2 Columnas) -->
+        <section
+          class="max-w-7xl mx-auto px-container-padding pb-container-padding w-full"
+        >
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-element-gap items-start"
+          >
+            <!-- COLUMNA IZQUIERDA: Canales Directos e Información de Contacto (5 Columnas) -->
+            <div class="lg:col-span-5 flex flex-col gap-element-gap">
+              <!-- Tarjeta: Portería y Garita Principal -->
+              <article
+                class="bg-surface-container-lowest rounded-xl p-stack-spacing shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-unit">
+                    <div
+                      class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary"
+                    >
+                      <span class="material-symbols-outlined text-[22px]"
+                        >local_police</span
+                      >
+                    </div>
+                    <div>
+                      <h2
+                        class="font-label-bold text-label-bold text-on-surface"
+                      >
+                        Portería Principal y Garitas de Acceso
+                      </h2>
+                      <span
+                        class="font-body-md text-[12px] text-primary font-medium"
+                        >24 Horas / 7 Días ininterrumpido</span
+                      >
+                    </div>
+                  </div>
+                  <span
+                    class="px-2 py-0.5 rounded-full bg-secondary-container text-primary font-label-bold text-[11px]"
+                    >En Vivo</span
+                  >
+                </div>
+                <div
+                  class="mt-element-gap space-y-unit font-body-md text-body-md text-on-surface-variant"
+                >
+                  <div class="flex items-center gap-unit">
+                    <span
+                      class="material-symbols-outlined text-secondary text-[18px]"
+                      >phone_in_talk</span
+                    >
+                    <span class=""
+                      ><strong class="font-label-bold text-on-surface"
+                        >PBX:</strong
+                      >
+                      (601) 745-8920 Ext. 101 / 102</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-unit">
+                    <span
+                      class="material-symbols-outlined text-secondary text-[18px]"
+                      >emergency_home</span
+                    >
+                    <span class=""
+                      ><strong class="font-label-bold text-on-surface"
+                        >Celular Emergencias:</strong
+                      >
+                      +57 315 890 1234</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-unit">
+                    <span
+                      class="material-symbols-outlined text-secondary text-[18px]"
+                      >pin_drop</span
+                    >
+                    <span class="truncate"
+                      >Cra. 48 # 128 - 35, Garita de Control Vehicular</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="mt-element-gap p-unit rounded-lg bg-surface-container-low flex items-start gap-unit"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[18px] mt-0.5"
+                    >verified_user</span
+                  >
+                  <p
+                    class="font-body-md text-[13px] text-on-surface-variant leading-snug"
+                  >
+                    Atención presencial inmediata para contingencias de ingreso,
+                    talanquera o validación QR.
+                  </p>
+                </div>
+              </article>
+              <!-- Tarjeta: Oficina de Administración Central -->
+              <article
+                class="bg-surface-container-lowest rounded-xl p-stack-spacing shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div class="flex items-start justify-between">
+                  <div class="flex items-center gap-unit">
+                    <div
+                      class="w-10 h-10 rounded-lg bg-secondary-container flex items-center justify-center text-primary"
+                    >
+                      <span class="material-symbols-outlined text-[22px]"
+                        >corporate_fare</span
+                      >
+                    </div>
+                    <div>
+                      <h2
+                        class="font-label-bold text-label-bold text-on-surface"
+                      >
+                        Oficina de Administración P.H.
+                      </h2>
+                      <span
+                        class="font-body-md text-[12px] text-on-surface-variant"
+                        >Gestión ejecutiva y jurídica</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="mt-element-gap space-y-unit font-body-md text-body-md text-on-surface-variant"
+                >
+                  <div class="flex items-start gap-unit">
+                    <span
+                      class="material-symbols-outlined text-secondary text-[18px] mt-0.5"
+                      >schedule</span
+                    >
+                    <span class=""
+                      >Lun a Vie: 8:00 a.m. - 5:00 p.m. <br />Sábados: 9:00 a.m.
+                      - 12:00 m.</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-unit">
+                    <span
+                      class="material-symbols-outlined text-secondary text-[18px]"
+                      >mail</span
+                    >
+                    <a
+                      class="font-link text-link text-primary hover:underline"
+                      href="mailto:administracion@geranioph.com"
+                      >administracion@geranioph.com</a
+                    >
+                  </div>
+                  <div class="flex items-center gap-unit">
+                    <span
+                      class="material-symbols-outlined text-secondary text-[18px]"
+                      >call</span
+                    >
+                    <span class="">(601) 745-8920 Ext. 105</span>
+                  </div>
+                  <div class="flex items-center gap-unit">
+                    <span
+                      class="material-symbols-outlined text-primary-container text-[18px]"
+                      >chat</span
+                    >
+                    <span class=""
+                      ><strong class="font-label-bold text-on-surface"
+                        >WhatsApp:</strong
+                      >
+                      +57 320 455 7890 (Solo Mensajes)</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="mt-element-gap pt-unit border-t-0 bg-surface-container-low/70 p-unit rounded-lg"
+                >
+                  <span
+                    class="font-label-bold text-[12px] text-on-surface block mb-1"
+                    >Trámites habilitados:</span
+                  >
+                  <p
+                    class="font-body-md text-[13px] text-on-surface-variant leading-snug"
+                  >
+                    Paz y salvos, registro de vehículos de propietarios,
+                    apelación de sobreestadías y liquidación de tarifas.
+                  </p>
+                </div>
+              </article>
+              <!-- Tarjeta: Asistencia Técnica del Sistema SGP -->
+              <article
+                class="bg-surface-container-lowest rounded-xl p-stack-spacing shadow-sm hover:shadow-md transition-shadow"
+              >
+                <div class="flex items-center gap-unit">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface"
+                  >
+                    <span class="material-symbols-outlined text-[22px]"
+                      >developer_board</span
+                    >
+                  </div>
+                  <div>
+                    <h2 class="font-label-bold text-label-bold text-on-surface">
+                      Mesa de Soporte Tecnológico SGP
+                    </h2>
+                    <span
+                      class="font-body-md text-[12px] text-on-surface-variant"
+                      >Lunes a Sábado de 7:00 a.m. a 7:00 p.m.</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="mt-stack-spacing space-y-unit font-body-md text-body-md text-on-surface-variant"
+                >
+                  <div class="flex items-center gap-unit">
+                    <span
+                      class="material-symbols-outlined text-secondary text-[18px]"
+                      >send_time_extension</span
+                    >
+                    <a
+                      class="font-link text-link text-primary hover:underline"
+                      href="mailto:soporte.sgp@geranioph.com"
+                      >soporte.sgp@geranioph.com</a
+                    >
+                  </div>
+                  <p class="font-body-md text-[13px] text-on-surface-variant">
+                    Cobertura en fallas con lector de código QR, sincronización
+                    de servidores o problemas de acceso de usuarios garita.
+                  </p>
+                </div>
+              </article>
+              <!-- Mini Sección de Normativa Rápida -->
+              <div
+                class="bg-primary text-on-primary rounded-xl p-stack-spacing shadow-md relative overflow-hidden"
+              >
+                <div
+                  class="absolute -right-6 -bottom-6 w-32 h-32 bg-white/10 rounded-full blur-2xl pointer-events-none"
+                ></div>
+                <div class="flex items-center gap-unit mb-unit">
+                  <span
+                    class="material-symbols-outlined text-primary-fixed text-[24px]"
+                    >gavel</span
+                  >
+                  <h3 class="font-label-bold text-label-bold text-on-primary">
+                    Tiempos Reglamentarios de Respuesta
+                  </h3>
+                </div>
+                <p
+                  class="font-body-md text-[13px] text-on-primary/80 mb-stack-spacing"
+                >
+                  Conforme al Manual de Convivencia y Régimen de Propiedad
+                  Horizontal:
+                </p>
+                <div class="grid grid-cols-3 gap-unit text-center">
+                  <div class="bg-on-primary/10 rounded-lg p-unit">
+                    <span
+                      class="font-h1 text-[22px] font-bold block text-primary-fixed"
+                      >5 días</span
+                    >
+                    <span class="font-body-md text-[11px] text-on-primary/90"
+                      >Peticiones y Consultas</span
+                    >
+                  </div>
+                  <div class="bg-on-primary/10 rounded-lg p-unit">
+                    <span
+                      class="font-h1 text-[22px] font-bold block text-primary-fixed"
+                      >48 hrs</span
+                    >
+                    <span class="font-body-md text-[11px] text-on-primary/90"
+                      >Cobros y Sobreestadía</span
+                    >
+                  </div>
+                  <div class="bg-on-primary/10 rounded-lg p-unit">
+                    <span
+                      class="font-h1 text-[22px] font-bold block text-primary-fixed"
+                      >Inmediata</span
+                    >
+                    <span class="font-body-md text-[11px] text-on-primary/90"
+                      >Emergencia Garita</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- COLUMNA DERECHA: Formulario de Contacto y Radicación de PQRS (7 Columnas) -->
+            <div class="lg:col-span-7">
+              <div
+                class="bg-surface-container-lowest rounded-xl p-container-padding shadow-md"
+              >
+                <!-- Encabezado del Formulario -->
+                <div class="space-y-unit pb-element-gap">
+                  <div class="flex items-center gap-unit">
+                    <span
+                      class="material-symbols-outlined text-primary-container text-[26px]"
+                      >mark_email_read</span
+                    >
+                    <h2 class="font-h1 text-[22px] text-on-surface">
+                      Enviar Mensaje o Radicar Solicitud
+                    </h2>
+                  </div>
+                  <p
+                    class="font-subtitle text-subtitle text-on-surface-variant"
+                  >
+                    Diligencie el formulario a continuación. Se generará un
+                    número de radicado oficial para seguimiento en tiempo real
+                    de su caso.
+                  </p>
+                </div>
+                <!-- Formulario SGP Geranio -->
+                <form
+                  class="space-y-element-gap"
+                  id="sgp-pqrs-form"
+                  onsubmit="
+                    event.preventDefault();
+                    handlePqrsSubmit();
+                  "
+                >
+                  <!-- Fila 1: Nombre Completo y Tipo de Usuario -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-element-gap">
+                    <div class="flex flex-col gap-label-to-input">
+                      <label
+                        class="font-label-bold text-label-bold text-on-surface flex items-center"
+                        for="pqrs-name"
+                      >
+                        Nombre y Apellidos completos
+                        <span class="text-error ml-1">*</span>
+                      </label>
+                      <input
+                        class="w-full h-11 px-unit rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline placeholder:font-placeholder shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                        id="pqrs-name"
+                        placeholder="Ej. Carlos Mendoza Parra"
+                        required=""
+                        type="text"
+                      />
+                    </div>
+                    <div class="flex flex-col gap-label-to-input">
+                      <label
+                        class="font-label-bold text-label-bold text-on-surface flex items-center"
+                        for="pqrs-user-type"
+                      >
+                        Tipo de Usuario <span class="text-error ml-1">*</span>
+                      </label>
+                      <select
+                        class="w-full h-11 px-unit rounded-lg bg-surface-container-lowest text-on-surface shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                        id="pqrs-user-type"
+                        required=""
+                      >
+                        <option disabled="" selected="" value="">
+                          Seleccione una opción
+                        </option>
+                        <option value="propietario">
+                          Propietario / Residente
+                        </option>
+                        <option value="visitante">Visitante</option>
+                        <option value="contratista">
+                          Contratista de Obra / Servicios
+                        </option>
+                        <option value="conductor">
+                          Conductor de Ruta / Domicilio
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- Fila 2: Correo y Celular -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-element-gap">
+                    <div class="flex flex-col gap-label-to-input">
+                      <label
+                        class="font-label-bold text-label-bold text-on-surface flex items-center"
+                        for="pqrs-email"
+                      >
+                        Correo Electrónico
+                        <span class="text-error ml-1">*</span>
+                      </label>
+                      <input
+                        class="w-full h-11 px-unit rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline placeholder:font-placeholder shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                        id="pqrs-email"
+                        placeholder="nombre@correo.com"
+                        required=""
+                        type="email"
+                      />
+                    </div>
+                    <div class="flex flex-col gap-label-to-input">
+                      <label
+                        class="font-label-bold text-label-bold text-on-surface flex items-center"
+                        for="pqrs-phone"
+                      >
+                        Número de Celular / WhatsApp
+                        <span class="text-error ml-1">*</span>
+                      </label>
+                      <input
+                        class="w-full h-11 px-unit rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline placeholder:font-placeholder shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                        id="pqrs-phone"
+                        placeholder="Ej. 310 123 4567"
+                        required=""
+                        type="tel"
+                      />
+                    </div>
+                  </div>
+                  <!-- Fila 3: Torre/Bloque y Apartamento -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-element-gap">
+                    <div class="flex flex-col gap-label-to-input">
+                      <label
+                        class="font-label-bold text-label-bold text-on-surface"
+                        for="pqrs-tower"
+                      >
+                        Torre / Bloque
+                      </label>
+                      <select
+                        class="w-full h-11 px-unit rounded-lg bg-surface-container-lowest text-on-surface shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                        id="pqrs-tower"
+                      >
+                        <option value="none">No aplica / Externo</option>
+                        <option value="t1">Torre 1</option>
+                        <option value="t2">Torre 2</option>
+                        <option value="t3">Torre 3</option>
+                        <option value="t4">Torre 4</option>
+                        <option value="t5">Torre 5</option>
+                      </select>
+                    </div>
+                    <div class="flex flex-col gap-label-to-input">
+                      <label
+                        class="font-label-bold text-label-bold text-on-surface"
+                        for="pqrs-apartment"
+                      >
+                        Apartamento / Unidad
+                      </label>
+                      <input
+                        class="w-full h-11 px-unit rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline placeholder:font-placeholder shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                        id="pqrs-apartment"
+                        placeholder="Ej. 402, 1105 o Local"
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                  <!-- Fila 4: Placa y Tipo de Novedad -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-element-gap">
+                    <div class="flex flex-col gap-label-to-input">
+                      <label
+                        class="font-label-bold text-label-bold text-on-surface"
+                        for="pqrs-plate"
+                      >
+                        Placa Vehicular
+                        <span
+                          class="font-body-md text-[12px] text-on-surface-variant font-normal"
+                          >(Opcional)</span
+                        >
+                      </label>
+                      <input
+                        class="w-full h-11 px-unit rounded-lg bg-surface-container-lowest text-on-surface uppercase placeholder:normal-case placeholder:text-outline placeholder:font-placeholder shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                        id="pqrs-plate"
+                        maxlength="8"
+                        placeholder="Ej. ABC-123"
+                        type="text"
+                      />
+                    </div>
+                    <div class="flex flex-col gap-label-to-input">
+                      <label
+                        class="font-label-bold text-label-bold text-on-surface flex items-center"
+                        for="pqrs-category"
+                      >
+                        Tipo de Novedad / Motivo
+                        <span class="text-error ml-1">*</span>
+                      </label>
+                      <select
+                        class="w-full h-11 px-unit rounded-lg bg-surface-container-lowest text-on-surface shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                        id="pqrs-category"
+                        required=""
+                      >
+                        <option disabled="" selected="" value="">
+                          Seleccione el asunto de gestión
+                        </option>
+                        <option value="bahias">
+                          Consulta de Bahías y Cupos
+                        </option>
+                        <option value="qr">
+                          Problema con Tarjeta QR o Escaneo
+                        </option>
+                        <option value="cobro">
+                          Aclaración de Cobro / Sobreestadía
+                        </option>
+                        <option value="garita">
+                          Inconveniente en Garita / Portería
+                        </option>
+                        <option value="registro">
+                          Registro Vehicular Residente
+                        </option>
+                        <option value="general">
+                          Petición / Queja General
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <!-- Fila 5: Asunto Breve -->
+                  <div class="flex flex-col gap-label-to-input">
+                    <label
+                      class="font-label-bold text-label-bold text-on-surface flex items-center"
+                      for="pqrs-subject"
+                    >
+                      Asunto de la comunicación
+                      <span class="text-error ml-1">*</span>
+                    </label>
+                    <input
+                      class="w-full h-11 px-unit rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline placeholder:font-placeholder shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                      id="pqrs-subject"
+                      placeholder="Resumen breve del caso o novedad"
+                      required=""
+                      type="text"
+                    />
+                  </div>
+                  <!-- Fila 6: Mensaje Detallado con Contador de Caracteres -->
+                  <div class="flex flex-col gap-label-to-input">
+                    <div class="flex items-center justify-between">
+                      <label
+                        class="font-label-bold text-label-bold text-on-surface flex items-center"
+                        for="pqrs-message"
+                      >
+                        Mensaje detallado y hechos
+                        <span class="text-error ml-1">*</span>
+                      </label>
+                      <span
+                        class="font-body-md text-[12px] text-on-surface-variant"
+                        id="char-counter"
+                        >0 / 1000 caracteres</span
+                      >
+                    </div>
+                    <textarea
+                      class="w-full p-unit rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline placeholder:font-placeholder shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container transition-all resize-y"
+                      id="pqrs-message"
+                      maxlength="1000"
+                      oninput="
+                        document.getElementById('char-counter').textContent =
+                          this.value.length + ' / 1000 caracteres'
+                      "
+                      placeholder="Describa con precisión los hechos, fecha, hora aproximada, bahía asignada o el inconveniente presentado en el sistema SGP..."
+                      required=""
+                      rows="4"
+                    ></textarea>
+                  </div>
+                  <!-- Casilla de Verificación de Privacidad -->
+                  <div class="flex items-start gap-unit pt-unit">
+                    <input
+                      class="mt-1 w-4 h-4 rounded text-primary-container focus:ring-primary"
+                      id="pqrs-terms"
+                      required=""
+                      type="checkbox"
+                      placeholder="on"
+                      value=""
+                    />
+                    <label
+                      class="font-body-md text-[13px] text-on-surface-variant leading-tight select-none"
+                      for="pqrs-terms"
+                    >
+                      Acepto la política de tratamiento de datos personales
+                      conforme a la
+                      <span class="text-on-surface font-medium"
+                        >Ley 1581 de 2012</span
+                      >
+                      de Colombia y autorizo el uso de estos datos con fines
+                      administrativos y de seguridad del Conjunto Residencial
+                      Geranio P.H.
+                    </label>
+                  </div>
+                  <!-- Botón de Acción Principal -->
+                  <div class="pt-unit">
+                    <button
+                      class="w-full h-12 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-button-text text-button-text flex items-center justify-center gap-unit transition-all shadow-md active:scale-[0.99]"
+                      type="submit"
+                    >
+                      <span class="material-symbols-outlined text-[20px]"
+                        >send</span
+                      >
+                      <span class="">Radicar Solicitud y Enviar Mensaje</span>
+                    </button>
+                  </div>
+                  <!-- Feedback de Éxito Dinámico (Oculto inicialmente) -->
+                  <div
+                    class="hidden p-stack-spacing bg-secondary-container rounded-lg text-on-secondary-container flex items-start gap-unit"
+                    id="pqrs-success-alert"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-[24px]"
+                      >task_alt</span
+                    >
+                    <div class="flex flex-col">
+                      <span class="font-label-bold text-label-bold text-primary"
+                        >¡Solicitud radicada con éxito!</span
+                      >
+                      <span class="font-body-md text-[13px] mt-0.5"
+                        >Número de radicado:
+                        <strong
+                          class="font-label-bold text-on-surface"
+                          id="radicado-code"
+                          >SGP-2025-0841</strong
+                        >. Se ha despachado confirmación a su correo
+                        electrónico.</span
+                      >
+                    </div>
+                  </div>
+                  <!-- Nota al pie del formulario -->
+                  <div class="text-center pt-unit">
+                    <p
+                      class="font-subtitle text-[12px] text-on-surface-variant flex items-center justify-center gap-1"
+                    >
+                      <span
+                        class="material-symbols-outlined text-[16px] text-secondary"
+                        >mark_email_unread</span
+                      >
+                      Recibirá una copia con el radicado a su correo electrónico
+                      institucional registrado.
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 3. SECCIÓN INFERIOR (Preguntas Frecuentes Rápidas - FAQ) -->
+        <section
+          class="max-w-7xl mx-auto px-container-padding pb-container-padding w-full"
+        >
+          <div class="mb-stack-spacing">
+            <div class="flex items-center gap-unit">
+              <span class="material-symbols-outlined text-primary text-[22px]"
+                >help_center</span
+              >
+              <h2 class="font-h1 text-[22px] text-on-surface">
+                Preguntas Frecuentes de Acceso y Parqueadero
+              </h2>
+            </div>
+            <p class="font-subtitle text-subtitle text-on-surface-variant mt-1">
+              Respuestas instantáneas a las inquietudes más comunes del sistema
+              SGP Geranio.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-element-gap">
+            <!-- FAQ 1 -->
+            <article
+              class="bg-surface-container-lowest rounded-xl p-stack-spacing shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="w-8 h-8 rounded bg-secondary-container flex items-center justify-center text-primary mb-unit"
+                >
+                  <span class="font-label-bold text-[14px]">01</span>
+                </div>
+                <h3
+                  class="font-label-bold text-label-bold text-on-surface mb-label-to-input"
+                >
+                  ¿Cuánto tiempo de cortesía tienen los visitantes?
+                </h3>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                >
+                  Los visitantes disponen de
+                  <strong class="font-label-bold text-on-surface"
+                    >2 horas continuas gratuitas</strong
+                  >
+                  de cortesía conforme al reglamento interno de P.H. Posterior a
+                  este lapso, se causará la tarifa reglamentaria por fracción o
+                  sobreestadía.
+                </p>
+              </div>
+              <div
+                class="mt-element-gap pt-unit flex items-center gap-1 text-primary font-link text-link"
+              >
+                <span class="material-symbols-outlined text-[16px]"
+                  >verified</span
+                >
+                <span class="">Reglamento Art. 24</span>
+              </div>
+            </article>
+            <!-- FAQ 2 -->
+            <article
+              class="bg-surface-container-lowest rounded-xl p-stack-spacing shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="w-8 h-8 rounded bg-secondary-container flex items-center justify-center text-primary mb-unit"
+                >
+                  <span class="font-label-bold text-[14px]">02</span>
+                </div>
+                <h3
+                  class="font-label-bold text-label-bold text-on-surface mb-label-to-input"
+                >
+                  ¿Qué hacer si pierdo la tarjeta QR física en garita?
+                </h3>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                >
+                  Debe
+                  <strong class="font-label-bold text-on-surface"
+                    >notificar de inmediato al guarda de turno</strong
+                  >
+                  para la anulación de la credencial en el sistema, validación
+                  de la propiedad del vehículo y la emisión de cobro de
+                  reposición ($15.000 COP).
+                </p>
+              </div>
+              <div
+                class="mt-element-gap pt-unit flex items-center gap-1 text-primary font-link text-link"
+              >
+                <span class="material-symbols-outlined text-[16px]"
+                  >qr_code_scanner</span
+                >
+                <span class="">Protocolo Garita 1 y 2</span>
+              </div>
+            </article>
+            <!-- FAQ 3 -->
+            <article
+              class="bg-surface-container-lowest rounded-xl p-stack-spacing shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
+            >
+              <div>
+                <div
+                  class="w-8 h-8 rounded bg-secondary-container flex items-center justify-center text-primary mb-unit"
+                >
+                  <span class="font-label-bold text-[14px]">03</span>
+                </div>
+                <h3
+                  class="font-label-bold text-label-bold text-on-surface mb-label-to-input"
+                >
+                  ¿Cómo registrar un vehículo adicional de residente?
+                </h3>
+                <p
+                  class="font-body-md text-body-md text-on-surface-variant leading-relaxed"
+                >
+                  Debe radicar la solicitud a través de este portal adjuntando
+                  copia legible de la
+                  <strong class="font-label-bold text-on-surface"
+                    >tarjeta de propiedad</strong
+                  >
+                  y constancia de residencia o certificado de tradición vigente
+                  expedido por la administración.
+                </p>
+              </div>
+              <div
+                class="mt-element-gap pt-unit flex items-center gap-1 text-primary font-link text-link"
+              >
+                <span class="material-symbols-outlined text-[16px]"
+                  >directions_car</span
+                >
+                <span class="">Vía Administración Central</span>
+              </div>
+            </article>
+          </div>
+        </section>
+        <!-- Script interactivo seguro y ligero para radicación y UX -->
+        <script>
+          function handlePqrsSubmit() {
+            const form = document.getElementById("sgp-pqrs-form");
+            const successBox = document.getElementById("pqrs-success-alert");
+            const radicadoLabel = document.getElementById("radicado-code");
+
+            // Generar radicado aleatorio realista con prefijo SGP
+            const randomId =
+              "SGP-" +
+              new Date().getFullYear() +
+              "-" +
+              Math.floor(1000 + Math.random() * 9000);
+            if (radicadoLabel) {
+              radicadoLabel.textContent = randomId;
+            }
+
+            if (successBox) {
+              successBox.classList.remove("hidden");
+              successBox.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest",
+              });
+            }
+
+            // Deshabilitar botón para evitar envíos duplicados
+            const submitBtn = form.querySelector('button[type="submit"]');
+            if (submitBtn) {
+              submitBtn.setAttribute("disabled", "true");
+              submitBtn.classList.add("opacity-60", "cursor-not-allowed");
+              submitBtn.innerHTML =
+                '<span class="material-symbols-outlined text-[20px]">check</span> Solicitud Registrada';
+            }
+          }
+        </script>
+      </div>
+    </main>
+    <footer
+      class="w-full bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] py-stack-spacing"
+    >
+      <div
+        class="max-w-7xl mx-auto px-container-padding flex flex-col md:flex-row items-center justify-between gap-stack-spacing"
+      >
+        <div
+          class="flex flex-col sm:flex-row items-center gap-element-gap text-center sm:text-left"
+        >
+          <p class="font-subtitle text-subtitle text-on-surface-variant">
+            © 2026 Conjunto Residencial Geranio P.H. Todos los derechos
+            reservados.
+          </p>
+          <div class="flex items-center gap-unit">
+            <a
+              class="font-link text-link text-primary hover:underline"
+              data-path="terminos-y-condiciones"
+              href="#"
+              >Términos</a
+            ><span class="text-outline-variant font-subtitle text-subtitle"
+              >•</span
+            ><a
+              class="font-link text-link text-primary hover:underline"
+              data-path="politica-de-privacidad"
+              href="#"
+              >Privacidad</a
+            ><span class="text-outline-variant font-subtitle text-subtitle"
+              >•</span
+            ><a
+              class="font-link text-link text-primary hover:underline"
+              data-path="reglamento-ph"
+              href="#"
+              >Reglamento P.H.</a
+            >
+          </div>
+        </div>
+        <div
+          class="flex items-center gap-unit bg-surface-container px-unit py-unit rounded"
+        >
+          <span
+            class="w-2 h-2 rounded-full bg-primary-container animate-pulse"
+          ></span
+          ><span class="material-symbols-outlined text-primary text-[18px]"
+            >security</span
+          ><span class="font-label-bold text-label-bold text-on-surface"
+            >Garita 1 Activa</span
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
