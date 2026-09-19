@@ -137,13 +137,10 @@
       };
     </script>
   </head>
-  <body
-    class="bg-background font-body-md text-body-md text-on-surface min-h-screen flex flex-col"
-  >
+  <body class="bg-background font-body-md text-body-md text-on-surface min-h-screen flex flex-col">
     <!-- Barra de navegación -->
      
     <%- include("Partials/navigation") %>
-    
     
     <main class="w-full pt-16 bg-background flex-1">
       <div class="flex flex-col w-full">
@@ -1001,55 +998,6 @@
         </script>
       </div>
     </main>
-    <footer
-      class="w-full bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] py-stack-spacing"
-    >
-      <div
-        class="max-w-7xl mx-auto px-container-padding flex flex-col md:flex-row items-center justify-between gap-stack-spacing"
-      >
-        <div
-          class="flex flex-col sm:flex-row items-center gap-element-gap text-center sm:text-left"
-        >
-          <p class="font-subtitle text-subtitle text-on-surface-variant">
-            © 2026 Conjunto Residencial Geranio P.H. Todos los derechos
-            reservados.
-          </p>
-          <div class="flex items-center gap-unit">
-            <a
-              class="font-link text-link text-primary hover:underline"
-              data-path="terminos-y-condiciones"
-              href="#"
-              >Términos</a
-            ><span class="text-outline-variant font-subtitle text-subtitle"
-              >•</span
-            ><a
-              class="font-link text-link text-primary hover:underline"
-              data-path="politica-de-privacidad"
-              href="#"
-              >Privacidad</a
-            ><span class="text-outline-variant font-subtitle text-subtitle"
-              >•</span
-            ><a
-              class="font-link text-link text-primary hover:underline"
-              data-path="reglamento-ph"
-              href="#"
-              >Reglamento P.H.</a
-            >
-          </div>
-        </div>
-        <div
-          class="flex items-center gap-unit bg-surface-container px-unit py-unit rounded"
-        >
-          <span
-            class="w-2 h-2 rounded-full bg-primary-container animate-pulse"
-          ></span
-          ><span class="material-symbols-outlined text-primary text-[18px]"
-            >security</span
-          ><span class="font-label-bold text-label-bold text-on-surface"
-            >Garita 1 Activa</span
-          >
-        </div>
-      </div>
-    </footer>
+    <%- include("Partials/footer") %>
   </body>
 </html>

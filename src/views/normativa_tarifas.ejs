@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+      rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"/>
+    <style>
+      @layer base {
+        html,
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          overscroll-behavior: none;
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#181c1e",
+              "surface-container": "#ebeef0",
+              "outline-variant": "#c2c6d4",
+              "secondary-container": "#d1e1f9",
+              "on-surface": "#181c1e",
+              "surface-container-high": "#e5e9eb",
+              "on-tertiary": "#ffffff",
+              background: "#f7fafc",
+              "on-secondary-container": "#556478",
+              "primary-fixed-dim": "#acc7ff",
+              "primary-container": "#0056b3",
+              "surface-bright": "#f7fafc",
+              "on-primary-fixed-variant": "#004491",
+              "on-tertiary-container": "#ffc2a7",
+              "on-tertiary-fixed": "#351000",
+              "secondary-fixed-dim": "#b8c8df",
+              "on-error-container": "#93000a",
+              "primary-fixed": "#d7e2ff",
+              primary: "#003f87",
+              tertiary: "#722b00",
+              "surface-container-low": "#f1f4f6",
+              "on-primary": "#ffffff",
+              outline: "#727784",
+              "on-secondary": "#ffffff",
+              "on-primary-container": "#bbd0ff",
+              "surface-container-highest": "#e0e3e5",
+              "error-container": "#ffdad6",
+              "inverse-on-surface": "#eef1f3",
+              "on-secondary-fixed-variant": "#39485b",
+              "tertiary-fixed-dim": "#ffb694",
+              "on-primary-fixed": "#001a40",
+              secondary: "#515f74",
+              surface: "#f7fafc",
+              "on-surface-variant": "#424752",
+              "surface-variant": "#e0e3e5",
+              "inverse-primary": "#acc7ff",
+              "on-error": "#ffffff",
+              "surface-tint": "#115cb9",
+              "surface-dim": "#d7dadc",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary-fixed-variant": "#7b2f00",
+              "on-secondary-fixed": "#0d1c2e",
+              "secondary-fixed": "#d4e4fc",
+              "tertiary-fixed": "#ffdbcc",
+              "inverse-surface": "#2d3133",
+              "tertiary-container": "#983c00",
+              error: "#ba1a1a",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "label-to-input": "8px",
+              "stack-spacing": "24px",
+              "container-padding": "40px",
+              unit: "4px",
+              "element-gap": "20px",
+            },
+            fontFamily: {
+              "body-md": ["Inter"],
+              h1: ["Inter"],
+              link: ["Inter"],
+              "label-bold": ["Inter"],
+              subtitle: ["Inter"],
+              "button-text": ["Inter"],
+              placeholder: ["Inter"],
+            },
+            fontSize: {
+              "body-md": ["14px", { lineHeight: "1.5", fontWeight: "400" }],
+              h1: [
+                "28px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              link: ["13px", { lineHeight: "1.5", fontWeight: "500" }],
+              "label-bold": ["14px", { lineHeight: "1.4", fontWeight: "600" }],
+              subtitle: ["14px", { lineHeight: "1.5", fontWeight: "400" }],
+              "button-text": ["15px", { lineHeight: "1.5", fontWeight: "600" }],
+              placeholder: ["14px", { lineHeight: "1.5", fontWeight: "400" }],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+
+    <!-- Barra de navegación -->
+     
+    <%- include("Partials/navigation") %>
+    
+    <main class="w-full pt-20 bg-background min-h-screen">
+      <div class="flex flex-col w-full">
+        <!-- Top Decorative Ambient Glow -->
+        <div class="relative w-full overflow-hidden">
+          <div
+            class="absolute -top-32 left-1/2 -translate-x-1/2 w-[920px] h-[320px] bg-gradient-to-b from-primary-fixed/40 via-surface-container/20 to-transparent blur-3xl pointer-events-none -z-10"
+          ></div>
+          <!-- 1. ENCABEZADO INSTITUCIONAL -->
+          <section class="max-w-7xl mx-auto px-6 lg:px-12 pt-8 pb-12 w-full">
+            <div class="flex flex-col items-start gap-4">
+              <!-- Badge institucional -->
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-container shadow-sm"
+              >
+                <span class="material-symbols-outlined text-[16px] text-primary"
+                  >gavel</span
+                >
+                <span
+                  class="font-link text-link uppercase tracking-wider text-[11px] font-semibold"
+                  >Marco Regulatorio y Tarifario • Acuerdo de Asamblea
+                  General</span
+                >
+              </div>
+              <!-- H1 Principal -->
+              <h1
+                class="font-h1 text-h1 text-on-surface max-w-3xl text-3xl md:text-4xl tracking-tight leading-tight"
+              >
+                Normativa de Parqueaderos y Régimen Tarifario
+              </h1>
+              <!-- Subtítulo explicativo -->
+              <p
+                class="font-subtitle text-subtitle text-on-surface-variant max-w-3xl text-base md:text-lg leading-relaxed"
+              >
+                Conozca las disposiciones del Manual de Convivencia, tiempos de
+                cortesía, esquema de tarifas por sobreestadía y sanciones
+                vigentes para el uso de bahías comunes en el Conjunto
+                Residencial Geranio P.H.
+              </p>
+              <!-- Fichas de Vigencia y Resolución -->
+              <div
+                class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-4xl pt-4"
+              >
+                <div
+                  class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-lowest shadow-sm"
+                >
+                  <div
+                    class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary"
+                  >
+                    <span class="material-symbols-outlined text-[20px]"
+                      >calendar_month</span
+                    >
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span class="font-link text-[11px] text-on-surface-variant uppercase tracking-wider"
+                      >Vigencia</span>
+                    <span class="font-label-bold text-label-bold text-on-surface truncate"
+                      >Año en curso (2026 - 2027)</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-lowest shadow-sm">
+                  <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-[20px]"
+                      >description</span>
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span
+                      class="font-link text-[11px] text-on-surface-variant uppercase tracking-wider"
+                      >Resolución</span>
+                    <span class="font-label-bold text-label-bold text-on-surface truncate"
+                      >Acta Asamblea Ext. N° 18</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 rounded-lg bg-surface-container-lowest shadow-sm">
+                  <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+                    <span class="material-symbols-outlined text-[20px]"
+                      >payments</span>
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span class="font-link text-[11px] text-on-surface-variant uppercase tracking-wider"
+                      >Unidad Monetaria</span>
+                    <span class="font-label-bold text-label-bold text-on-surface truncate"
+                      >Pesos Colombianos (COP $)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- 2. REGLA DE ORO: POLÍTICA DE CORTESÍA GRATUITA -->
+          <section class="max-w-7xl mx-auto px-6 lg:px-12 py-6 w-full">
+            <div class="relative overflow-hidden rounded-xl bg-primary text-on-primary p-8 lg:p-10 shadow-md">
+              <!-- Ambient decorative shapes -->
+              <div class="absolute -right-20 -top-20 w-80 h-80 rounded-full bg-primary-container opacity-40 blur-2xl pointer-events-none">
+              </div>
+              <div class="absolute -left-12 -bottom-12 w-64 h-64 rounded-full bg-surface-tint opacity-30 blur-2xl pointer-events-none">
+              </div>
+              <div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+                <div class="max-w-xl flex flex-col gap-3">
+                  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-on-primary/10 text-on-primary w-fit backdrop-blur-sm">
+                    <span class="material-symbols-outlined text-[18px]">verified</span>
+                    <span class="font-link text-link text-xs uppercase tracking-wide"
+                      >Beneficio Comunitario Vigente</span>
+                  </div>
+                  <h2 class="font-h1 text-2xl lg:text-3xl font-bold tracking-tight text-on-primary">
+                    2 Horas de Cortesía para Visitantes
+                  </h2>
+                  <p class="font-body-md text-on-primary/90 text-sm leading-relaxed">
+                    Todo vehículo visitante formalmente registrado cuenta con
+                    <span class="font-semibold text-white">
+                        120 minutos continuos libres de costo</span>
+                        , contados con precisión a partir de la emisión e impresión 
+                        del ticket con código QR en la Garita Principal 1.
+                  </p>
+                  <div class="flex items-center gap-2 pt-2 text-on-primary/80 text-xs">
+                    <span class="material-symbols-outlined text-[16px]">info</span>
+                    <span class="">
+                        El beneficio aplica una sola vez por estancia diaria y no 
+                        es acumulable.</span>
+                  </div>
+                </div>
+                <!-- Contador visual / Pasos de control -->
+                <div class="w-full lg:w-auto bg-surface-container-lowest/10 backdrop-blur-md rounded-xl p-6 flex flex-col gap-4 min-w-[340px] shadow-sm">
+                  <span class="font-link text-xs uppercase tracking-wider text-on-primary/75"
+                    >Secuencia Operativa de Control</span>
+                  <div class="flex flex-col gap-4">
+                    <!-- Paso 1 -->
+                    <div class="flex items-start gap-3">
+                      <div class="w-7 h-7 rounded-full bg-on-primary text-primary font-bold text-xs flex items-center justify-center shrink-0 shadow-sm">
+                        1
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="font-label-bold text-label-bold text-xs text-on-primary"
+                          >Ingreso &amp; Validación QR</span>
+                        <span class="font-body-md text-[11px] text-on-primary/80">
+                            Garita emite registro y sella la hora oficial de 
+                            entrada.</span>
+                      </div>
+                    </div>
+                    <!-- Conector -->
+                    <div class="w-0.5 h-3 bg-on-primary/30 ml-3.5 -my-2"></div>
+                    <!-- Paso 2 -->
+                    <div class="flex items-start gap-3">
+                      <div class="w-7 h-7 rounded-full bg-secondary-container text-primary font-bold text-xs flex items-center justify-center shrink-0 shadow-sm">
+                        2
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="font-label-bold text-label-bold text-xs text-on-primary"
+                          >Tiempo Libre de Cobro</span>
+                        <span class="font-body-md text-[11px] text-on-primary/80">
+                            Ventana de 0 a 120 minutos sin cobro de tarifa.</span>
+                      </div>
+                    </div>
+                    <!-- Conector -->
+                    <div class="w-0.5 h-3 bg-on-primary/30 ml-3.5 -my-2"></div>
+                    <!-- Paso 3 -->
+                    <div class="flex items-start gap-3">
+                      <div class="w-7 h-7 rounded-full bg-on-primary/20 text-on-primary font-bold text-xs flex items-center justify-center shrink-0">
+                        3
+                      </div>
+                      <div class="flex flex-col">
+                        <span class="font-label-bold text-label-bold text-xs text-on-primary"
+                          >Tarificación Fraccionada</span>
+                        <span class="font-body-md text-[11px] text-on-primary/80"
+                          >A partir del minuto 121 se aplica cobro por hora o
+                          fracción.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- 3. TABLA COMPARATIVA DE TARIFAS Y VALORES VIGENTES -->
+          <section class="max-w-7xl mx-auto px-6 lg:px-12 py-10 w-full">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+              <div>
+                <span class="font-link text-link text-primary uppercase font-semibold text-xs tracking-wider"
+                  >Cuadro de Tarifas Oficiales</span>
+                <h2 class="font-h1 text-h1 text-on-surface text-2xl font-bold mt-1">
+                  Esquema Tarifario por Categoría de Vehículo
+                </h2>
+              </div>
+              <div class="flex items-center gap-2 text-on-surface-variant text-xs font-subtitle">
+                <span class="material-symbols-outlined text-primary text-[18px]"
+                  >update</span>
+                <span class="">Valores auditados según Acta de Copropiedad</span>
+              </div>
+            </div>
+            <!-- Tarjetas comparativas Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- Categoría 1: Automóviles -->
+              <div class="rounded-xl bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+                      <span class="material-symbols-outlined text-[26px]"
+                        >directions_car</span>
+                    </div>
+                    <span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-link text-[11px] font-semibold"
+                      >Tipo A</span>
+                  </div>
+                  <h3 class="font-label-bold text-base text-on-surface">
+                    Automóviles y Camionetas
+                  </h3>
+                  <p class="font-body-md text-xs text-on-surface-variant mt-1 mb-5 leading-relaxed">
+                    Bahías estándar de visitantes delimitadas con franja azul y
+                    blanca.
+                  </p>
+                  <div class="space-y-3 pt-2">
+                    <div class="flex justify-between items-center py-2 bg-surface-container-low rounded px-3">
+                      <span class="font-subtitle text-xs text-on-surface-variant"
+                        >0 a 2 horas:</span>
+                      <span class="font-label-bold text-xs text-primary uppercase font-bold"
+                        >Cortesía ($0)</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 bg-surface-container-low rounded px-3">
+                      <span class="font-subtitle text-xs text-on-surface-variant"
+                        >Hora o fracción:</span>
+                      <span class="font-label-bold text-xs text-on-surface font-semibold"
+                        >$3.500 COP</span>
+                    </div>
+                    <div class="flex justify-between items-center py-2 bg-surface-container-low rounded px-3">
+                      <span class="font-subtitle text-xs text-on-surface-variant"
+                        >Día / Sobreestadía:</span>
+                      <span class="font-label-bold text-xs text-on-surface font-semibold"
+                        >$35.000 COP</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-6 pt-4 bg-surface-container-highest/40 rounded p-3 text-[11px] text-on-surface-variant flex items-center gap-2">
+                  <span class="material-symbols-outlined text-tertiary-container text-[16px]"
+                    >bedtime</span>
+                  <span class="">
+                    Límite nocturno: No pernoctar sin permiso previo.</span>
+                </div>
+              </div>
+              <!-- Categoría 2: Motocicletas -->
+              <div class="rounded-xl bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+                      <span class="material-symbols-outlined text-[26px]">two_wheeler</span>
+                    </div>
+                    <span
+                      class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-link text-[11px] font-semibold"
+                      >Tipo B</span
+                    >
+                  </div>
+                  <h3 class="font-label-bold text-base text-on-surface">
+                    Motocicletas
+                  </h3>
+                  <p
+                    class="font-body-md text-xs text-on-surface-variant mt-1 mb-5 leading-relaxed"
+                  >
+                    Área demarcada con anclajes de seguridad junto a Garita 1.
+                  </p>
+                  <div class="space-y-3 pt-2">
+                    <div
+                      class="flex justify-between items-center py-2 bg-surface-container-low rounded px-3"
+                    >
+                      <span
+                        class="font-subtitle text-xs text-on-surface-variant"
+                        >0 a 2 horas:</span
+                      >
+                      <span
+                        class="font-label-bold text-xs text-primary uppercase font-bold"
+                        >Cortesía ($0)</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center py-2 bg-surface-container-low rounded px-3"
+                    >
+                      <span
+                        class="font-subtitle text-xs text-on-surface-variant"
+                        >Hora o fracción:</span
+                      >
+                      <span
+                        class="font-label-bold text-xs text-on-surface font-semibold"
+                        >$2.000 COP</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center py-2 bg-surface-container-low rounded px-3"
+                    >
+                      <span
+                        class="font-subtitle text-xs text-on-surface-variant"
+                        >Día / Sobreestadía:</span
+                      >
+                      <span
+                        class="font-label-bold text-xs text-on-surface font-semibold"
+                        >$20.000 COP</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="mt-6 pt-4 bg-surface-container-highest/40 rounded p-3 text-[11px] text-on-surface-variant flex items-center gap-2"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[16px]"
+                    >lock</span
+                  >
+                  <span class=""
+                    >Uso obligatorio de casco al ingresar al conjunto.</span
+                  >
+                </div>
+              </div>
+              <!-- Categoría 3: Movilidad Reducida (PMR) -->
+              <div
+                class="rounded-xl bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between transition-all hover:shadow-md ring-0"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div
+                      class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary"
+                    >
+                      <span class="material-symbols-outlined text-[26px]"
+                        >accessible</span
+                      >
+                    </div>
+                    <span
+                      class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-link text-[11px] font-semibold"
+                      >Prioritario</span
+                    >
+                  </div>
+                  <h3 class="font-label-bold text-base text-on-surface">
+                    Movilidad Reducida (PMR)
+                  </h3>
+                  <p
+                    class="font-body-md text-xs text-on-surface-variant mt-1 mb-5 leading-relaxed"
+                  >
+                    Bahías accesibles de 3.5m con rampa continua directa a
+                    torres.
+                  </p>
+                  <div class="space-y-3 pt-2">
+                    <div
+                      class="flex justify-between items-center py-2 bg-surface-container-low rounded px-3"
+                    >
+                      <span
+                        class="font-subtitle text-xs text-on-surface-variant"
+                        >0 a 3 horas:</span
+                      >
+                      <span
+                        class="font-label-bold text-xs text-primary uppercase font-bold"
+                        >Cortesía Ext. ($0)</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center py-2 bg-surface-container-low rounded px-3"
+                    >
+                      <span
+                        class="font-subtitle text-xs text-on-surface-variant"
+                        >Hora o fracción:</span
+                      >
+                      <span
+                        class="font-label-bold text-xs text-on-surface font-semibold"
+                        >$3.000 COP</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center py-2 bg-surface-container-low rounded px-3"
+                    >
+                      <span
+                        class="font-subtitle text-xs text-on-surface-variant"
+                        >Día / Sobreestadía:</span
+                      >
+                      <span
+                        class="font-label-bold text-xs text-on-surface font-semibold"
+                        >$30.000 COP</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="mt-6 pt-4 bg-surface-container-highest/40 rounded p-3 text-[11px] text-on-surface-variant flex items-center gap-2"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[16px]"
+                    >badge</span
+                  >
+                  <span class=""
+                    >Requiere distintivo visible en panorámico.</span
+                  >
+                </div>
+              </div>
+              <!-- Categoría 4: Credencial / QR Reposición -->
+              <div
+                class="rounded-xl bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between transition-all hover:shadow-md"
+              >
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <div
+                      class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary"
+                    >
+                      <span class="material-symbols-outlined text-[26px]"
+                        >credit_card</span
+                      >
+                    </div>
+                    <span
+                      class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-link text-[11px] font-semibold"
+                      >Insumo</span
+                    >
+                  </div>
+                  <h3 class="font-label-bold text-base text-on-surface">
+                    Credencial / QR Físico
+                  </h3>
+                  <p
+                    class="font-body-md text-xs text-on-surface-variant mt-1 mb-5 leading-relaxed"
+                  >
+                    Cargos por reposición física o extravío de tarjeta en Garita
+                    1.
+                  </p>
+                  <div class="space-y-3 pt-2">
+                    <div
+                      class="flex justify-between items-center py-2 bg-surface-container-low rounded px-3"
+                    >
+                      <span
+                        class="font-subtitle text-xs text-on-surface-variant"
+                        >Ticket digital app:</span
+                      >
+                      <span
+                        class="font-label-bold text-xs text-on-surface font-semibold"
+                        >Sin costo ($0)</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center py-2 bg-surface-container-low rounded px-3"
+                    >
+                      <span
+                        class="font-subtitle text-xs text-on-surface-variant"
+                        >Pérdida tarjeta:</span
+                      >
+                      <span
+                        class="font-label-bold text-xs text-error font-semibold"
+                        >$15.000 COP</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center py-2 bg-surface-container-low rounded px-3"
+                    >
+                      <span
+                        class="font-subtitle text-xs text-on-surface-variant"
+                        >Reposición tag tag:</span
+                      >
+                      <span
+                        class="font-label-bold text-xs text-on-surface font-semibold"
+                        >$25.000 COP</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="mt-6 pt-4 bg-surface-container-highest/40 rounded p-3 text-[11px] text-on-surface-variant flex items-center gap-2"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-[16px]"
+                    >receipt_long</span
+                  >
+                  <span class="">Facturado directo a expensa ordinaria.</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- 4. CALCULADORA / SIMULADOR INTERACTIVO DE TARIFA -->
+          <section class="max-w-7xl mx-auto px-6 lg:px-12 py-10 w-full">
+            <div
+              class="bg-surface-container-lowest rounded-xl p-8 lg:p-10 shadow-sm"
+            >
+              <div class="flex flex-col lg:flex-row gap-10 items-start">
+                <!-- Lado Izquierdo: Controles -->
+                <div class="flex-1 w-full space-y-6">
+                  <div>
+                    <div
+                      class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-semibold mb-2"
+                    >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >calculate</span
+                      >
+                      <span class="">Herramienta de Consulta Rápida</span>
+                    </div>
+                    <h2 class="font-h1 text-2xl font-bold text-on-surface">
+                      Simulador de Tarifa Estimada
+                    </h2>
+                    <p
+                      class="font-body-md text-sm text-on-surface-variant mt-1"
+                    >
+                      Calcule el cobro proyectado según el tipo de vehículo y el
+                      tiempo estimado de permanencia en las bahías de visitantes
+                      de Geranio P.H.
+                    </p>
+                  </div>
+                  <!-- Selector de Vehículo -->
+                  <div>
+                    <label
+                      class="block font-label-bold text-xs text-on-surface-variant uppercase tracking-wider mb-2"
+                    >
+                      Tipo de Vehículo
+                    </label>
+                    <div class="grid grid-cols-3 gap-3" id="vehicle-selector">
+                      <button
+                        class="vehicle-btn active flex flex-col items-center justify-center p-3.5 rounded-lg bg-surface-container text-primary font-label-bold text-xs transition-colors hover:bg-secondary-container focus:outline-none"
+                        data-vehicle="car"
+                        type="button"
+                      >
+                        <span class="material-symbols-outlined text-[24px] mb-1"
+                          >directions_car</span
+                        >
+                        <span class="">Automóvil</span>
+                      </button>
+                      <button
+                        class="vehicle-btn flex flex-col items-center justify-center p-3.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-bold text-xs transition-colors hover:bg-secondary-container focus:outline-none"
+                        data-vehicle="moto"
+                        type="button"
+                      >
+                        <span class="material-symbols-outlined text-[24px] mb-1"
+                          >two_wheeler</span
+                        >
+                        <span class="">Motocicleta</span>
+                      </button>
+                      <button
+                        class="vehicle-btn flex flex-col items-center justify-center p-3.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-bold text-xs transition-colors hover:bg-secondary-container focus:outline-none"
+                        data-vehicle="pmr"
+                        type="button"
+                      >
+                        <span class="material-symbols-outlined text-[24px] mb-1"
+                          >accessible</span
+                        >
+                        <span class="">PMR (Prioritario)</span>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- Selector de Horas de Permanencia -->
+                  <div>
+                    <div class="flex justify-between items-center mb-2">
+                      <label
+                        class="font-label-bold text-xs text-on-surface-variant uppercase tracking-wider"
+                      >
+                        Horas de Estancia
+                      </label>
+                      <span
+                        class="font-label-bold text-primary text-sm"
+                        id="hours-display-text"
+                        >3 horas</span
+                      >
+                    </div>
+                    <input
+                      class="w-full h-2 bg-surface-container rounded-lg appearance-none cursor-pointer accent-primary"
+                      id="hours-slider"
+                      max="12"
+                      min="1"
+                      type="range"
+                      value="3"
+                    />
+                    <div
+                      class="flex justify-between text-[11px] text-on-surface-variant pt-2"
+                    >
+                      <span class="">1h (Cortesía)</span>
+                      <span class="">2h (Cortesía)</span>
+                      <span class="">4h</span>
+                      <span class="">6h</span>
+                      <span class="">8h</span>
+                      <span class="">12h</span>
+                    </div>
+                  </div>
+                  <!-- Botón reset -->
+                  <div class="pt-2">
+                    <button class="inline-flex items-center gap-2 font-link text-xs text-on-surface-variant hover:text-primary transition-colors"
+                      id="btn-reset-calc"
+                      type="button"
+                    >
+                      <span class="material-symbols-outlined text-[16px]"
+                        >restart_alt</span>
+                      <span class="">Restablecer valores predeterminados</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- Lado Derecho: Desglose Dinámico -->
+                <div class="w-full lg:w-[420px] bg-surface-container-low rounded-xl p-6 flex flex-col justify-between shadow-sm">
+                  <div>
+                    <span class="font-link text-xs uppercase tracking-wider text-on-surface-variant font-semibold"
+                      >Resumen de Liquidación</span>
+                    <div class="space-y-4 my-5">
+                      <div class="flex justify-between items-center text-sm">
+                        <span class="font-body-md text-on-surface-variant"
+                          >Vehículo seleccionado:</span>
+                        <span class="font-label-bold text-on-surface"
+                          id="summary-vehicle"
+                          >Automóvil / Camioneta</span>
+                      </div>
+                      <div class="flex justify-between items-center text-sm">
+                        <span class="font-body-md text-on-surface-variant"
+                          >Tiempo total proyectado:</span>
+                        <span class="font-label-bold text-on-surface"
+                          id="summary-total-hours"
+                          >3 horas</span>
+                      </div>
+                      <div class="flex justify-between items-center text-sm">
+                        <span class="font-body-md text-on-surface-variant"
+                          >Cortesía institucional descontada:</span>
+                        <span class="font-label-bold text-primary"
+                          id="summary-discount-hours"
+                          >- 2 horas ($0 COP)</span>
+                      </div>
+                      <div class="flex justify-between items-center text-sm">
+                        <span class="font-body-md text-on-surface-variant"
+                          >Horas facturables:</span>
+                        <span class="font-label-bold text-on-surface"
+                          id="summary-billed-hours"
+                          >1 hora</span>
+                      </div>
+                      <div class="flex justify-between items-center text-sm">
+                        <span class="font-body-md text-on-surface-variant"
+                          >Tarifa por hora:</span>
+                        <span class="font-label-bold text-on-surface"
+                          id="summary-rate"
+                          >$3.500 COP</span>
+                      </div>
+                    </div>
+                    <!-- Total a Pagar -->
+                    <div class="bg-surface-container-lowest p-5 rounded-lg shadow-sm">
+                      <span class="block font-subtitle text-xs text-on-surface-variant"
+                        >Total Estimado a Liquidar</span>
+                      <div class="flex items-baseline gap-2 mt-1">
+                        <span class="font-h1 text-3xl font-bold text-primary"
+                          id="summary-total-amount"
+                          >$3.500</span>
+                        <span class="font-link text-xs text-on-surface-variant font-semibold"
+                          >COP</span>
+                      </div>
+                      <p class="text-[11px] font-body-md text-on-surface-variant mt-2" id="summary-note">
+                        Tarifa base para bahías de visitantes diurnas.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="mt-6 pt-4 flex items-center gap-2 text-[11px] text-on-surface-variant">
+                    <span class="material-symbols-outlined text-[16px] text-primary">
+                        credit_card</span>
+                    <span class="">
+                        Medios de pago en Garita: Efectivo exacto, Datáfono o
+                        Transferencia PSE QR.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- 5. NORMAS DEL MANUAL DE CONVIVENCIA Y RÉGIMEN SANCIONATORIO -->
+          <section class="max-w-7xl mx-auto px-6 lg:px-12 py-10 w-full">
+            <div class="flex flex-col gap-2 mb-8">
+              <span class="font-link text-link text-primary uppercase font-semibold text-xs tracking-wider"
+                >Reglamento y Cumplimiento</span>
+              <h2 class="font-h1 text-h1 text-on-surface text-2xl font-bold">
+                Normas del Manual de Convivencia y Sanciones
+              </h2>
+              <p class="font-subtitle text-subtitle text-on-surface-variant max-w-2xl text-sm">
+                Disposiciones de estricto cumplimiento para mantener el orden,
+                la seguridad vial y el acceso equitativo de todos los residentes
+                y visitantes.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Tarjeta 1: Prohibición de Pernocta -->
+              <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[22px]"
+                      >nights_stay</span>
+                  </div>
+                  <div class="space-y-2">
+                    <h3 class="font-label-bold text-base text-on-surface">
+                      Prohibición de Pernocta No Autorizada
+                    </h3>
+                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+                      Las bahías comunales de visitantes son de rotación
+                      continua y no constituyen parqueaderos permanentes ni de
+                      residencia. La hora máxima de retiro sugerida es a las
+                      22:00 horas. Vehículos que pernocten sin reporte escrito
+                      previo a administración asumirán la tarifa plena de día
+                      más recargo por sobreestadía.
+                    </p>
+                  </div>
+                </div>
+                <div class="mt-4 pt-3 flex items-center gap-2 text-[11px] font-medium text-tertiary">
+                  <span class="material-symbols-outlined text-[16px]"
+                    >warning</span>
+                  <span class="">
+                    Sanción: Tarifa plena día ($35.000 COP) + amonestación a la
+                    unidad privada.</span>
+                </div>
+              </div>
+              <!-- Tarjeta 2: Parqueo en Zonas Prohibidas -->
+              <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[22px]"
+                      >front_loader</span>
+                  </div>
+                  <div class="space-y-2">
+                    <h3 class="font-label-bold text-base text-on-surface">
+                      Estacionamiento en Zonas Prohibidas
+                    </h3>
+                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+                      Queda expresamente prohibido estacionar sobre andenes
+                      peatonales, calzadas de circulación, zonas verdes o
+                      bloquear accesos a hidrantes y bahías asignadas a Personas
+                      con Movilidad Reducida (PMR) sin contar con la
+                      acreditación debida.
+                    </p>
+                  </div>
+                </div>
+                <div class="mt-4 pt-3 flex items-center gap-2 text-[11px] font-medium text-error">
+                  <span class="material-symbols-outlined text-[16px]">
+                    block</span>
+                  <span class="">
+                    Sanción: Inmovilización preventiva con cepo y multa según
+                    reglamento interno.</span>
+                </div>
+              </div>
+              <!-- Tarjeta 3: Límite de Frecuencia Semanal -->
+              <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[22px]"
+                      >event_repeat</span>
+                  </div>
+                  <div class="space-y-2">
+                    <h3 class="font-label-bold text-base text-on-surface">
+                      Límite de Frecuencia Semanal
+                    </h3>
+                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+                      Para prevenir la ocupación encubierta por parte de
+                      vehículos pertenecientes a residentes que eviten el
+                      arriendo de bahías privadas, se fija un máximo de 3
+                      ingresos semanales por placa en las bahías de visitantes.
+                      A partir del cuarto ingreso no aplicará la cortesía de 2
+                      horas.
+                    </p>
+                  </div>
+                </div>
+                <div class="mt-4 pt-3 flex items-center gap-2 text-[11px] font-medium text-primary">
+                  <span class="material-symbols-outlined text-[16px]">info</span>
+                  <span class="">
+                    Control automatizado mediante lectura de placas por Garita
+                    1.</span>
+                </div>
+              </div>
+              <!-- Tarjeta 4: Procedimiento de Impugnación o Apelación -->
+              <div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[22px]">balance</span>
+                  </div>
+                  <div class="space-y-2">
+                    <h3 class="font-label-bold text-base text-on-surface">
+                      Procedimiento de Impugnación y Apelación
+                    </h3>
+                    <p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+                      El propietario o arrendatario titular del apartamento
+                      anfitrión cuenta con un término perentorio de 48 horas
+                      hábiles para radicar una solicitud de aclaración o
+                      impugnación mediante el módulo digital de Atención y
+                      Soporte, adjuntando soporte fotográfico del ticket QR.
+                    </p>
+                  </div>
+                </div>
+                <div class="mt-4 pt-3 flex items-center gap-2 text-[11px] font-medium text-on-surface-variant">
+                  <span class="material-symbols-outlined text-[16px]">schedule</span>
+                  <span class="">
+                    Respuesta administrativa en un plazo máximo de 3 días
+                    laborales.</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- 6. DESCARGA DE DOCUMENTOS OFICIALES Y ATENCIÓN -->
+          <section class="max-w-7xl mx-auto px-6 lg:px-12 py-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <!-- Recuadro para descargar PDFs -->
+              <div class="lg:col-span-2 bg-surface-container-lowest p-8 rounded-xl shadow-sm flex flex-col justify-between">
+                <div>
+                  <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-xs font-semibold mb-3">
+                    <span class="material-symbols-outlined text-[16px] text-primary"
+                      >folder_open</span>
+                    <span class="">Documentación Institucional Descargable</span>
+                  </div>
+                  <h3 class="font-h1 text-xl font-bold text-on-surface mb-2">
+                    Descarga de Reglamentos y Circulares
+                  </h3>
+                  <p class="font-body-md text-xs text-on-surface-variant leading-relaxed mb-6">
+                    Consulte y archive los documentos vigentes protocolizados
+                    ante la Administración y el Consejo de Administración de
+                    Geranio P.H.
+                  </p>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Documento 1 -->
+                    <a class="group flex items-center gap-4 p-4 rounded-lg bg-surface-container-low hover:bg-secondary-container/50 transition-colors"
+                      href="#"
+                    >
+                      <div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors shrink-0 shadow-sm">
+                        <span class="material-symbols-outlined text-[22px]"
+                          >picture_as_pdf</span>
+                      </div>
+                      <div class="flex flex-col min-w-0">
+                        <span class="font-label-bold text-xs text-on-surface group-hover:text-primary transition-colors truncate"
+                          >Reglamento Interno P.H.</span>
+                        <span class="font-subtitle text-[11px] text-on-surface-variant"
+                          >Formato PDF • 2.4 MB</span>
+                      </div>
+                      <span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary transition-colors ml-auto"
+                        >download</span>
+                    </a>
+                    <!-- Documento 2 -->
+                    <a class="group flex items-center gap-4 p-4 rounded-lg bg-surface-container-low hover:bg-secondary-container/50 transition-colors"
+                      href="#"
+                    >
+                      <div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors shrink-0 shadow-sm">
+                        <span class="material-symbols-outlined text-[22px]"
+                          >picture_as_pdf</span>
+                      </div>
+                      <div class="flex flex-col min-w-0">
+                        <span class="font-label-bold text-xs text-on-surface group-hover:text-primary transition-colors truncate"
+                          >Circular Tarifas Aprobadas</span>
+                        <span class="font-subtitle text-[11px] text-on-surface-variant"
+                          >Formato PDF • 850 KB</span>
+                      </div>
+                      <span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary transition-colors ml-auto"
+                        >download</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="pt-6 mt-6 flex items-center gap-2 text-[11px] text-on-surface-variant">
+                  <span class="material-symbols-outlined text-[16px] text-primary">
+                    verified_user</span>
+                  <span class="">
+                    Documentos firmados digitalmente por la Revisoría Fiscal
+                    del Conjunto.</span>
+                </div>
+              </div>
+              <!-- Banner directo de llamada a soporte -->
+              <div class="bg-primary-container text-on-primary p-8 rounded-xl shadow-sm flex flex-col justify-between"
+              >
+                <div class="space-y-4">
+                  <div class="w-10 h-10 rounded-lg bg-on-primary/10 flex items-center justify-center text-on-primary"
+                  >
+                    <span class="material-symbols-outlined text-[22px]"
+                      >support_agent</span>
+                  </div>
+                  <h3 class="font-h1 text-xl font-bold text-on-primary leading-snug">
+                    ¿Tiene dudas sobre una tarifa o cobro registrado?
+                  </h3>
+                  <p class="font-body-md text-xs text-on-primary/90 leading-relaxed">
+                    Nuestro canal de Atención y Soporte está disponible para
+                    resolver discrepancias en minutos de permanencia o validar
+                    pases especiales.
+                  </p>
+                </div>
+                <div class="pt-6">
+                  <a class="inline-flex items-center justify-center w-full h-11 px-5 rounded-lg bg-surface-container-lowest text-primary hover:bg-white font-button-text text-button-text transition-colors shadow-sm gap-2"
+                    data-path="atencion-y-soporte"
+                    href="/support">
+                    <span class="material-symbols-outlined text-[18px]">headset_mic</span>
+                    <span class="">Contactar a Atención y Soporte</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- Interactive Logic for the Simulator -->
+        <script>
+          (function () {
+            // Configuration parameters
+            const rates = {
+              car: {
+                name: "Automóvil / Camioneta",
+                freeHours: 2,
+                hourlyRate: 3500,
+                dailyCap: 35000,
+                note: "Tarifa base para bahías de visitantes diurnas.",
+              },
+              moto: {
+                name: "Motocicleta",
+                freeHours: 2,
+                hourlyRate: 2000,
+                dailyCap: 20000,
+                note: "Bahía demarcada con anclajes en Garita 1.",
+              },
+              pmr: {
+                name: "Movilidad Reducida (PMR)",
+                freeHours: 3,
+                hourlyRate: 3000,
+                dailyCap: 30000,
+                note: "Incluye 3 horas de cortesía con distintivo visible.",
+              },
+            };
+
+            let currentVehicle = "car";
+            let currentHours = 3;
+
+            // DOM Elements
+            const vehicleButtons = document.querySelectorAll(".vehicle-btn");
+            const hoursSlider = document.getElementById("hours-slider");
+            const hoursDisplayText =
+              document.getElementById("hours-display-text");
+            const btnReset = document.getElementById("btn-reset-calc");
+
+            const summaryVehicle = document.getElementById("summary-vehicle");
+            const summaryTotalHours = document.getElementById(
+              "summary-total-hours",
+            );
+            const summaryDiscountHours = document.getElementById(
+              "summary-discount-hours",
+            );
+            const summaryBilledHours = document.getElementById(
+              "summary-billed-hours",
+            );
+            const summaryRate = document.getElementById("summary-rate");
+            const summaryTotalAmount = document.getElementById(
+              "summary-total-amount",
+            );
+            const summaryNote = document.getElementById("summary-note");
+
+            function formatCOP(number) {
+              return (
+                "$" + number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+              );
+            }
+
+            function updateCalculation() {
+              const config = rates[currentVehicle];
+              const free = config.freeHours;
+              const totalH = parseInt(currentHours, 10);
+
+              let billedH = Math.max(0, totalH - free);
+              let totalVal = billedH * config.hourlyRate;
+
+              // Cap at daily rate if exceeded
+              if (totalVal > config.dailyCap) {
+                totalVal = config.dailyCap;
+              }
+
+              // Update UI
+              if (hoursDisplayText) {
+                hoursDisplayText.textContent =
+                  totalH + (totalH === 1 ? " hora" : " horas");
+              }
+              if (summaryVehicle) {
+                summaryVehicle.textContent = config.name;
+              }
+              if (summaryTotalHours) {
+                summaryTotalHours.textContent =
+                  totalH + (totalH === 1 ? " hora" : " horas");
+              }
+              if (summaryDiscountHours) {
+                summaryDiscountHours.textContent = `- ${free} horas ($0 COP)`;
+              }
+              if (summaryBilledHours) {
+                summaryBilledHours.textContent =
+                  billedH + (billedH === 1 ? " hora" : " horas");
+              }
+              if (summaryRate) {
+                summaryRate.textContent = formatCOP(config.hourlyRate) + " COP";
+              }
+              if (summaryTotalAmount) {
+                summaryTotalAmount.textContent = formatCOP(totalVal);
+              }
+              if (summaryNote) {
+                summaryNote.textContent =
+                  totalVal >= config.dailyCap
+                    ? "Se aplicó el tope diario de sobreestadía ($" +
+                      formatCOP(config.dailyCap) +
+                      ")."
+                    : config.note;
+              }
+            }
+
+            function updateVehicleButtons() {
+              vehicleButtons.forEach((btn) => {
+                const type = btn.getAttribute("data-vehicle");
+                if (type === currentVehicle) {
+                  btn.classList.remove(
+                    "bg-surface-container-low",
+                    "text-on-surface-variant",
+                  );
+                  btn.classList.add("bg-surface-container", "text-primary");
+                } else {
+                  btn.classList.remove("bg-surface-container", "text-primary");
+                  btn.classList.add(
+                    "bg-surface-container-low",
+                    "text-on-surface-variant",
+                  );
+                }
+              });
+            }
+
+            // Event listeners
+            vehicleButtons.forEach((btn) => {
+              btn.addEventListener("click", () => {
+                currentVehicle = btn.getAttribute("data-vehicle");
+                updateVehicleButtons();
+                updateCalculation();
+              });
+            });
+
+            if (hoursSlider) {
+              hoursSlider.addEventListener("input", (e) => {
+                currentHours = e.target.value;
+                updateCalculation();
+              });
+            }
+
+            if (btnReset) {
+              btnReset.addEventListener("click", () => {
+                currentVehicle = "car";
+                currentHours = 3;
+                if (hoursSlider) hoursSlider.value = 3;
+                updateVehicleButtons();
+                updateCalculation();
+              });
+            }
+
+            // Init
+            updateCalculation();
+          })();
+        </script>
+      </div>
+    </main>
+    <%- include("Partials/footer") %>
+    
+  </body>
+</html>
